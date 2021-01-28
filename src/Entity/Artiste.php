@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\PartenaireRepository;
+use App\Repository\ArtisteRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=PartenaireRepository::class)
+ * @ORM\Entity(repositoryClass=ArtisteRepository::class)
  */
-class Partenaire
+class Artiste
 {
     /**
      * @ORM\Id
@@ -25,12 +25,12 @@ class Partenaire
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $thumbnail;
+    private $genre;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $link;
+    private $thumbnail;
 
     public function getId(): ?int
     {
@@ -49,6 +49,18 @@ class Partenaire
         return $this;
     }
 
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(?string $genre): self
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
     public function getThumbnail(): ?string
     {
         return $this->thumbnail;
@@ -57,18 +69,6 @@ class Partenaire
     public function setThumbnail(?string $thumbnail): self
     {
         $this->thumbnail = $thumbnail;
-
-        return $this;
-    }
-
-    public function getLink(): ?string
-    {
-        return $this->link;
-    }
-
-    public function setLink(?string $link): self
-    {
-        $this->link = $link;
 
         return $this;
     }

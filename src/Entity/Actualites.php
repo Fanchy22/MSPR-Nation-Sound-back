@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\PartenaireRepository;
+use App\Repository\ActualitesRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=PartenaireRepository::class)
+ * @ORM\Entity(repositoryClass=ActualitesRepository::class)
  */
-class Partenaire
+class Actualites
 {
     /**
      * @ORM\Id
@@ -20,7 +20,12 @@ class Partenaire
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $name;
+    private $title;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $content;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -28,23 +33,35 @@ class Partenaire
     private $thumbnail;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="boolean")
      */
-    private $link;
+    private $emergency;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getTitle(): ?string
     {
-        return $this->name;
+        return $this->title;
     }
 
-    public function setName(?string $name): self
+    public function setTitle(?string $title): self
     {
-        $this->name = $name;
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(?string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
@@ -61,14 +78,14 @@ class Partenaire
         return $this;
     }
 
-    public function getLink(): ?string
+    public function getEmergency(): ?bool
     {
-        return $this->link;
+        return $this->emergency;
     }
 
-    public function setLink(?string $link): self
+    public function setEmergency(bool $emergency): self
     {
-        $this->link = $link;
+        $this->emergency = $emergency;
 
         return $this;
     }
