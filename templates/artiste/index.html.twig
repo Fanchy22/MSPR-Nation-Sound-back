@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Saisie des artistes!{% endblock %}
+
+{% block body %}
+    {{ form_start(artisteForm) }}
+
+    {{ form_label(artisteForm.name) }}
+    {{ form_widgetartisteForm.name) }}
+    {{ form_errors(artisteForm.name) }}<hr>
+
+    {{ form_label(artisteForm.genre) }}
+    {{ form_widget(artisteForm.genre) }}
+    {{ form_errors(artisteForm.genre) }}<hr>
+
+    {{ form_label(artisteForm.thumbnail) }}
+    {{ form_widget(artisteForm.thumbnail) }}
+    {{ form_errors(artisteForm.thumbnail) }}<hr>
+    <input type="submit" value="Envoyer">
+    {{ form_end(artisteForm) }}
+    {% for error in errors %}
+        <br>{{ error }}
+    {% else %}
+        <br>il n' y a pas d'erreur
+    {% endfor %}
+{% endblock %}
