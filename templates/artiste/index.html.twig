@@ -6,7 +6,7 @@
     {{ form_start(artisteForm) }}
 
     {{ form_label(artisteForm.name) }}
-    {{ form_widgetartisteForm.name) }}
+    {{ form_widget(artisteForm.name) }}
     {{ form_errors(artisteForm.name) }}<hr>
 
     {{ form_label(artisteForm.genre) }}
@@ -18,9 +18,5 @@
     {{ form_errors(artisteForm.thumbnail) }}<hr>
     <input type="submit" value="Envoyer">
     {{ form_end(artisteForm) }}
-    {% for error in errors %}
-        <br>{{ error }}
-    {% else %}
-        <br>il n' y a pas d'erreur
-    {% endfor %}
+
 {% endblock %}
