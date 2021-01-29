@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Saisie des artistes!{% endblock %}
+
+{% block body %}
+    {{ form_start(artisteForm) }}
+
+    {{ form_label(artisteForm.name) }}
+    {{ form_widget(artisteForm.name) }}
+    {{ form_errors(artisteForm.name) }}<hr>
+
+    {{ form_label(artisteForm.genre) }}
+    {{ form_widget(artisteForm.genre) }}
+    {{ form_errors(artisteForm.genre) }}<hr>
+
+    {{ form_label(artisteForm.profile) }}
+    {{ form_widget(artisteForm.profile) }}
+    {{ form_errors(artisteForm.profile) }}<hr>
+    <input type="submit" value="Envoyer">
+    {{ form_end(artisteForm) }}
+
+{% endblock %}
