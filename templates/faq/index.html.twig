@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FaqController!{% endblock %}
+
+{% block body %}
+    {{ form_start(faqForm) }}
+
+    {{ form_label(faqForm.question) }}
+    {{ form_widget(faqForm.question) }}
+    {{ form_errors(faqForm.question) }}<hr>
+
+    {{ form_label(faqForm.reponse) }}
+    {{ form_widget(faqForm.reponse) }}
+    {{ form_errors(faqForm.reponse) }}<hr>
+
+    {{ form_label(faqForm.visible) }}
+    {{ form_widget(faqForm.visible) }}
+    {{ form_errors(faqForm.visible) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(faqForm) }}
+{% endblock %}

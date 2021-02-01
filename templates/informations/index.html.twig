@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InformationsController!{% endblock %}
+
+{% block body %}
+    {{ form_start(informationsForm) }}
+
+    {{ form_label(informationsForm.title) }}
+    {{ form_widget(informationsForm.title) }}
+    {{ form_errors(informationsForm.title) }}<hr>
+
+    {{ form_label(informationsForm.content) }}
+    {{ form_widget(informationsForm.content) }}
+    {{ form_errors(informationsForm.content) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(informationsForm) }}
+{% endblock %}

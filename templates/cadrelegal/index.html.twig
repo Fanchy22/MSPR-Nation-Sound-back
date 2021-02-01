@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CadrelegalController!{% endblock %}
+
+{% block body %}
+    {{ form_start(cadrelegalForm) }}
+
+    {{ form_label(cadrelegalForm.title) }}
+    {{ form_widget(cadrelegalForm.title) }}
+    {{ form_errors(cadrelegalForm.title) }}<hr>
+
+    {{ form_label(cadrelegalForm.content) }}
+    {{ form_widget(cadrelegalForm.content) }}
+    {{ form_errors(cadrelegalForm.content) }}<hr>
+    <input type="submit" value="Envoyer">
+    {{ form_end(cadrelegalForm) }}
+{% endblock %}

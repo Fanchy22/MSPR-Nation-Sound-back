@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WcController!{% endblock %}
+
+{% block body %}
+    {{ form_start(wcForm) }}
+
+    {{ form_label(wcForm.name) }}
+    {{ form_widget(wcForm.name) }}
+    {{ form_errors(wcForm.name) }}<hr>
+
+    {{ form_label(wcForm.adress) }}
+    {{ form_widget(wcForm.adress) }}
+    {{ form_errors(wcForm.adress) }}<hr>
+
+    {{ form_label(wcForm.zipcode) }}
+    {{ form_widget(wcForm.zipcode) }}
+    {{ form_errors(wcForm.zipcode) }}<hr>
+
+    {{ form_label(wcForm.city) }}
+    {{ form_widget(wcForm.city) }}
+    {{ form_errors(wcForm.city) }}<hr>
+
+    {{ form_label(wcForm.country) }}
+    {{ form_widget(wcForm.country) }}
+    {{ form_errors(wcForm.country) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(wcForm) }}
+{% endblock %}

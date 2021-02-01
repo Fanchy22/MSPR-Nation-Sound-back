@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PartenaireController!{% endblock %}
+
+{% block body %}
+    {{ form_start(partenaireForm) }}
+
+    {{ form_label(partenaireForm.name) }}
+    {{ form_widget(partenaireForm.name) }}
+    {{ form_errors(partenaireForm.name) }}<hr>
+
+    {{ form_label(partenaireForm.thumbnail) }}
+    {{ form_widget(partenaireForm.thumbnail) }}
+    {{ form_errors(partenaireForm.thumbnail) }}<hr>
+
+    {{ form_label(partenaireForm.link) }}
+    {{ form_widget(partenaireForm.link) }}
+    {{ form_errors(partenaireForm.link) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(partenaireForm) }}
+{% endblock %}

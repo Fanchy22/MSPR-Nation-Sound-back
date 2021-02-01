@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+    {{ form_start(appForm) }}
+
+    {{ form_label(appForm.url) }}
+    {{ form_widget(appForm.url) }}
+    {{ form_errors(appForm.url) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(appForm) }}
+{% endblock %}

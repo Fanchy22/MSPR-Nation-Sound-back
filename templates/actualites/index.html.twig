@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActualitesController!{% endblock %}
+
+{% block body %}
+    {{ form_start(actualitesForm) }}
+
+    {{ form_label(actualitesForm.title) }}
+    {{ form_widget(actualitesForm.title) }}
+    {{ form_errors(actualitesForm.title) }}<hr>
+
+    {{ form_label(actualitesForm.content) }}
+    {{ form_widget(actualitesForm.content) }}
+    {{ form_errors(actualitesForm.content) }}<hr>
+
+    {{ form_label(actualitesForm.thumbnail) }}
+    {{ form_widget(actualitesForm.thumbnail) }}
+    {{ form_errors(actualitesForm.thumbnail) }}<hr>
+
+
+    {{ form_label(actualitesForm.emergency) }}
+    {{ form_widget(actualitesForm.emergency) }}
+    {{ form_errors(actualitesForm.emergency) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(actualitesForm) }}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ImagesController!{% endblock %}
+
+{% block body %}
+    {{ form_start(imagesForm) }}
+
+    {{ form_label(imagesForm.title) }}
+    {{ form_widget(imagesForm.title) }}
+    {{ form_errors(imagesForm.title) }}<hr>
+
+    {{ form_label(imagesForm.url) }}
+    {{ form_widget(imagesForm.url) }}
+    {{ form_errors(imagesForm.url) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(imagesForm) }}
+{% endblock %}
