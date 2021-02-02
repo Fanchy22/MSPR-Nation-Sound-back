@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MSPR-Nation-Sound-back.iml" filepath="$PROJECT_DIR$/.idea/MSPR-Nation-Sound-back.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Nation-Sound-MSPR/.idea/Nation-Sound-MSPR.iml" filepath="$PROJECT_DIR$/../Nation-Sound-MSPR/.idea/Nation-Sound-MSPR.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/wis-2021-symfony/.idea/wis-2021-symfony.iml" filepath="$USER_HOME$/Downloads/wis-2021-symfony/.idea/wis-2021-symfony.iml" />
     </modules>
   </component>
 </project>
