@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RestaurationController!{% endblock %}
+
+{% block body %}
+    {{ form_start(restaurationForm) }}
+
+    {{ form_label(restaurationForm.type) }}
+    {{ form_widget(restaurationForm.type) }}
+    {{ form_errors(restaurationForm.type) }}<hr>
+
+    {{ form_label(restaurationForm.name) }}
+    {{ form_widget(restaurationForm.name) }}
+    {{ form_errors(restaurationForm.name) }}<hr>
+
+    {{ form_label(restaurationForm.adress) }}
+    {{ form_widget(restaurationForm.adress) }}
+    {{ form_errors(restaurationForm.adress) }}<hr>
+
+    {{ form_label(restaurationForm.zipcode) }}
+    {{ form_widget(restaurationForm.zipcode) }}
+    {{ form_errors(restaurationForm.zipcode) }}<hr>
+
+    {{ form_label(restaurationForm.city) }}
+    {{ form_widget(restaurationForm.city) }}
+    {{ form_errors(restaurationForm.city) }}<hr>
+
+    {{ form_label(restaurationForm.country) }}
+    {{ form_widget(restaurationForm.country) }}
+    {{ form_errors(restaurationForm.country) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(restaurationForm) }}
+{% endblock %}

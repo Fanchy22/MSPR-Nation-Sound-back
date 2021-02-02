@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EmplacementController!{% endblock %}
+
+{% block body %}
+    {{ form_start(emplacementForm) }}
+
+    {{ form_label(emplacementForm.type) }}
+    {{ form_widget(emplacementForm.type) }}
+    {{ form_errors(emplacementForm.type) }}<hr>
+
+    {{ form_label(emplacementForm.thumbnail) }}
+    {{ form_widget(emplacementForm.thumbnail) }}
+    {{ form_errors(emplacementForm.thumbnail) }}<hr>
+
+    {{ form_label(emplacementForm.name) }}
+    {{ form_widget(emplacementForm.name) }}
+    {{ form_errors(emplacementForm.name) }}<hr>
+
+    {{ form_label(emplacementForm.adress) }}
+    {{ form_widget(emplacementForm.adress) }}
+    {{ form_errors(emplacementForm.adress) }}<hr>
+
+    {{ form_label(emplacementForm.zipcode) }}
+    {{ form_widget(emplacementForm.zipcode) }}
+    {{ form_errors(emplacementForm.zipcode) }}<hr>
+
+    {{ form_label(emplacementForm.city) }}
+    {{ form_widget(emplacementForm.city) }}
+    {{ form_errors(emplacementForm.city) }}<hr>
+
+    {{ form_label(emplacementForm.country) }}
+    {{ form_widget(emplacementForm.country) }}
+    {{ form_errors(emplacementForm.country) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(emplacementForm) }}
+{% endblock %}

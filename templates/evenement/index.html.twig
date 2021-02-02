@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EvenementController!{% endblock %}
+
+{% block body %}
+    {{ form_start(evenementForm) }}
+
+    {{ form_label(evenementForm.type) }}
+    {{ form_widget(evenementForm.type) }}
+    {{ form_errors(evenementForm.type) }}<hr>
+
+    {{ form_label(evenementForm.day) }}
+    {{ form_widget(evenementForm.day) }}
+    {{ form_errors(evenementForm.day) }}<hr>
+
+    {{ form_label(evenementForm.thumbnail) }}
+    {{ form_widget(evenementForm.thumbnail) }}
+    {{ form_errors(evenementForm.thumbnail) }}<hr>
+
+
+    {{ form_label(evenementForm.time) }}
+    {{ form_widget(evenementForm.time) }}
+    {{ form_errors(evenementForm.time) }}<hr>
+
+    {{ form_label(evenementForm.description) }}
+    {{ form_widget(evenementForm.description) }}
+    {{ form_errors(evenementForm.description) }}<hr>
+
+    {{ form_label(evenementForm.adress) }}
+    {{ form_widget(evenementForm.adress) }}
+    {{ form_errors(evenementForm.adress) }}<hr>
+
+    {{ form_label(evenementForm.zipcode) }}
+    {{ form_widget(evenementForm.zipcode) }}
+    {{ form_errors(evenementForm.zipcode) }}<hr>
+
+    {{ form_label(evenementForm.city) }}
+    {{ form_widget(evenementForm.city) }}
+    {{ form_errors(evenementForm.city) }}<hr>
+
+    {{ form_label(evenementForm.country) }}
+    {{ form_widget(evenementForm.country) }}
+    {{ form_errors(evenementForm.country) }}<hr>
+
+    {{ form_label(evenementForm.datedebut) }}
+    {{ form_widget(evenementForm.datedebut) }}
+    {{ form_errors(evenementForm.datedebut) }}<hr>
+
+    {{ form_label(evenementForm.datefin) }}
+    {{ form_widget(evenementForm.datefin) }}
+    {{ form_errors(evenementForm.datefin) }}<hr>
+
+    <input type="submit" value="Envoyer">
+    {{ form_end(evenementForm) }}
+{% endblock %}
