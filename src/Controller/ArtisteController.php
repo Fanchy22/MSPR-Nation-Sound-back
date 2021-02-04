@@ -42,7 +42,7 @@ class ArtisteController extends AbstractController
             $arrayArtiste[] = [
                 'name' => $artiste->getName(),
                 'genre' => $artiste->getGenre(),
-                'thumbnail' => $package->getUrl($artiste->getThumbnail()),
+                'thumbnail' => $artiste->getThumbnail() ? '' : $package->getUrl($artiste->getThumbnail()),
             ];
         }
 
