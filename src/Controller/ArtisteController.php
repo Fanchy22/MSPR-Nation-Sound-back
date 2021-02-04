@@ -28,7 +28,7 @@ class ArtisteController extends AbstractController
 
         $arrayArtistes = $this->artistesToArray($artistes);
 
-        return $this->json($arrayArtistes);
+        return $this->json($arrayArtistes, Response::HTTP_OK, ['Access-Control-Allow-Origin' => '*']);
     }
 
     /**
