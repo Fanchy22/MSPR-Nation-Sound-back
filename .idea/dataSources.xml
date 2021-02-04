@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< Updated upstream
-    <data-source source="LOCAL" name="@localhost" uuid="d04a0667-1567-471d-81d9-77c05547f36f">
-=======
-    <data-source source="LOCAL" name="@localhost" uuid="df798e30-f7f4-4dcd-b263-23286fba765f">
->>>>>>> Stashed changes
+    <data-source source="LOCAL" name="@localhost" uuid="f84180a9-d262-46b4-b887-a422c2f5e004">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
-<<<<<<< Updated upstream
-      <working-dir>$ProjectFileDir$</working-dir>
-      <driver-properties>
-        <property name="serverTimezone" value="Europe/Paris" />
-      </driver-properties>
-=======
->>>>>>> Stashed changes
+      <jdbc-url>jdbc:mysql://localhost:8889</jdbc-url>
     </data-source>
   </component>
 </project>
