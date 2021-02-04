@@ -25,10 +25,6 @@
     <input type="submit" value="Envoyer">
     {{ form_end(actualitesForm) }}
 
-    <h1>Liste des actualités</h1>
-    {% for actualite in actualites %}
-        <h2>{{ actualite.title }}</h2>
-        <div>{{ actualite.content }}</div>
-    {% endfor %}
+
 
 {% endblock %}
