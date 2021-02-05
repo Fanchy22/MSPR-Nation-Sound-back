@@ -42,7 +42,13 @@ class ArtisteController extends AbstractController
             $arrayArtiste[] = [
                 'name' => $artiste->getName(),
                 'genre' => $artiste->getGenre(),
-                //'thumbnail' => $artiste->getThumbnail() ? '' : $package->getUrl($artiste->getThumbnail()),
+                'thumbnail' => $artiste->getThumbnail(),
+                'day' => $artiste->getDay(),
+                'time' => $artiste->getTime(),
+                'timeValue' => $artiste->getTimeValue(),
+                'place' => $artiste->getPlace(),
+                'type' => $artiste->getType(),
+                'description' => $artiste->getDescription(),
             ];
         }
 
@@ -59,23 +65,8 @@ class ArtisteController extends AbstractController
         $artisteForm->handleRequest($request);
 
         if ($artisteForm->isSubmitted() && $artisteForm->isValid()) {
-            /** @var UploadedFile $profileFile */
-            $profileFile = $artisteForm->get('profile')->getData();
-            if ($profileFile) {
-                $originalFilename = pathinfo($profileFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$profileFile->guessExtension();
-                // Move the file to the directory where profileFile are stored
-                try {
-                    $profileFile->move(
-                        $this->getParameter('profiles_directory'),
-                        $newFilename
-                    );
-                } catch (FileException $e) {
-                    // ... handle exception if something happens during file upload
-                }
-                $artiste->setThumbnail($newFilename);
-            }
+
+
             //insérer en base de données $artiste
             $entityManager->persist($artiste);
             $entityManager->flush();
